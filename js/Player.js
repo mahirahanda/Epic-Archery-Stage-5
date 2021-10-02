@@ -1,7 +1,9 @@
-class Computer {
+class Player {
   constructor(x, y, width, height) {
+  
     var options = {
       isStatic: true
+     
     };
 
     this.body = Bodies.rectangle(x, y, width, height, options);
@@ -13,26 +15,26 @@ class Computer {
     this.life3="green";
     this.image = loadImage("./assets/player.png");
 
-        World.add(world, this.body);
+    World.add(world, this.body);
   }
   life(){
     push();
     textSize(20);
     fill("white")
-    text("Computer",1030,40);
+    text("Player",280,40);
   
   
   fill(this.life1);
-  rect( 920, 50, 70, 30);
+  rect(180,50,70,30);
   fill(this.life2);
-  rect(990,50,70,30);
+  rect(250,50,70,30);
   fill(this.life3);
-  rect(1050,50,70,30);
+  rect(320,50,70,30);
   pop();
   }
   
-
-   display() {
+ 
+  display() {
     var pos = this.body.position;
     var angle = this.body.angle;
     push();
